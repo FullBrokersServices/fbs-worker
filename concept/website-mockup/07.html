@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FBS Premium Footer</title>
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+    <!-- Main Content Area (Placeholder) -->
+    <main class="flex-grow flex items-center justify-center p-10">
+        <div class="text-center space-y-4 max-w-2xl">
+            <h1 class="text-4xl font-bold text-slate-900 dark:text-white">Full Broker Services</h1>
+            <p class="text-slate-600 dark:text-slate-300">Soluciones financieras premium para conversiones
+                internacionales.</p>
+        </div>
+    </main>
+    <!-- Footer Section -->
+    <footer class="bg-[#110e08] text-white border-t border-[#332d19] font-display">
+        <div class="max-w-[1200px] mx-auto px-6 py-12 lg:py-16">
+            <!-- Top Section: Logo & Description -->
+            <div class="flex flex-col items-center mb-12 text-center">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="size-8 text-primary flex items-center justify-center">
+                        <svg class="w-full h-full" fill="currentColor" viewbox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-bold tracking-tight text-white">FBS</span>
+                </div>
+                <p class="text-slate-400 max-w-md text-sm leading-relaxed">
+                    Facilitando transacciones globales con precisión, seguridad y exclusividad. Su socio de confianza en
+                    el mercado financiero.
+                </p>
+            </div>
+            <!-- Divider -->
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-[#eebd2b]/40 to-transparent mb-12"></div>
+            <!-- Main Grid: Links & Contact -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12 text-center md:text-left">
+                <!-- Column 1: Servicios -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-primary font-bold text-lg mb-2">Servicios</h3>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Conversión
+                        USD/EUR</a>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Intercambio USDT</a>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Asesoría
+                        Financiera</a>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Cuentas
+                        Corporativas</a>
+                </div>
+                <!-- Column 2: Legales -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-primary font-bold text-lg mb-2">Legales</h3>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Términos y
+                        Condiciones</a>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Política de
+                        Privacidad</a>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Política AML/KYC</a>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Aviso de Riesgo</a>
+                </div>
+                <!-- Column 3: Contacto -->
+                <div class="flex flex-col gap-4 items-center md:items-start">
+                    <h3 class="text-primary font-bold text-lg mb-2">Contacto</h3>
+                    <a class="flex items-center gap-3 text-slate-400 hover:text-primary transition-colors text-sm group"
+                        href="mailto:soporte@fbs-broker.com">
+                        <span
+                            class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">mail</span>
+                        soporte@fbs-broker.com
+                    </a>
+                    <a class="flex items-center gap-3 text-slate-400 hover:text-primary transition-colors text-sm group"
+                        href="https://wa.me/1234567890">
+                        <span
+                            class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">chat</span>
+                        +1 (555) 123-4567
+                    </a>
+                    <div class="flex items-center gap-2 text-slate-500 text-xs mt-2">
+                        <span class="material-symbols-outlined text-base">schedule</span>
+                        Lunes - Viernes: 9am - 6pm EST
+                    </div>
+                </div>
+                <!-- Column 4: Social & Newsletter -->
+                <div class="flex flex-col gap-4 items-center md:items-start">
+                    <h3 class="text-primary font-bold text-lg mb-2">Síguenos</h3>
+                    <div class="flex gap-4">
+                        <a class="size-10 rounded-full border border-[#332d19] bg-[#221d10] flex items-center justify-center text-primary hover:bg-primary hover:text-black transition-all duration-300"
+                            href="#">
+                            <!-- Using a generic share icon as proxy for social media since specific brand icons aren't in standard material symbols, but requested style is minimalist gold icons -->
+                            <span class="material-symbols-outlined text-xl">work</span>
+                        </a>
+                        <a class="size-10 rounded-full border border-[#332d19] bg-[#221d10] flex items-center justify-center text-primary hover:bg-primary hover:text-black transition-all duration-300"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">photo_camera</span>
+                        </a>
+                    </div>
+                    <p class="text-slate-500 text-xs mt-4 max-w-[200px]">Mantente informado sobre las últimas tendencias
+                        del mercado.</p>
+                </div>
+            </div>
+            <!-- Disclaimer Section -->
+            <div class="bg-[#221d10] rounded-xl p-6 border border-[#332d19] mb-12">
+                <div class="flex flex-col md:flex-row gap-4 items-start md:items-center">
+                    <span class="material-symbols-outlined text-primary text-3xl shrink-0">gavel</span>
+                    <p class="text-xs text-slate-400 leading-relaxed text-left">
+                        <span class="text-primary font-bold">Importante:</span> FBS opera como un facilitador de
+                        servicios de corretaje. Todas las transacciones cumplen con las normativas AML (Anti-Money
+                        Laundering) y KYC (Know Your Customer) vigentes. Los servicios financieros conllevan riesgos;
+                        asegúrese de comprenderlos completamente antes de operar.
+                    </p>
+                </div>
+            </div>
+            <!-- Bottom Bar -->
+            <div
+                class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#332d19] text-xs text-slate-500">
+                <p>© 2024 Full Broker Services. Todos los derechos reservados.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a class="hover:text-primary transition-colors" href="#">Términos</a>
+                    <a class="hover:text-primary transition-colors" href="#">Privacidad</a>
+                    <a class="hover:text-primary transition-colors" href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

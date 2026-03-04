@@ -1,0 +1,97 @@
+{
+    "Hero": {
+        "eyebrow": "Live Rates · Operating right now",
+        "headline": "Your money shouldn't ask for permission to cross borders.",
+        "subline": "We move it.",
+        "body": "Convert USD or EUR to Colombian Pesos or USDT in hours. No intermediary banks. No Western Union. Just WhatsApp.",
+        "cta": "Start Transfer on WhatsApp"
+    },
+    "Navbar": {
+        "inicio": "Home",
+        "servicios": "Services",
+        "comoFunciona": "How It Works",
+        "arquetipos": "For You",
+        "confianza": "Trust",
+        "faq": "FAQ",
+        "cotizar": "Quote Now"
+    },
+    "Footer": {
+        "tagline": "Your money, without borders.",
+        "description": "Premium currency brokerage operating via WhatsApp. Speed, security, and legal backing.",
+        "amlDisclaimer": "⚖️ FBS operates as a brokerage service facilitator. All transactions comply with current AML and KYC regulations.",
+        "rights": "© 2026 Full Broker Services. All rights reserved."
+    },
+    "Stats": {
+        "vol": "+$50M USD",
+        "volLabel": "Transacted",
+        "ops": "+12,000",
+        "opsLabel": "Successful Operations",
+        "time": "15 min",
+        "timeLabel": "Average Time",
+        "support": "24/7",
+        "supportLabel": "Premium Support"
+    },
+    "HowItWorks": {
+        "title": "Your Money, Without Borders — in 3 Steps",
+        "subtitle": "We simplify international finances with a transparent and exclusive process.",
+        "step1": "1. Get a Quote",
+        "step1Body": "Start a chat on WhatsApp. Tell us how much you want to move and to which currency. We give you the preferential rate instantly.",
+        "step2": "2. Transfer",
+        "step2Body": "Make the Wire or SEPA transfer to our verified corporate accounts in the USA or Europe. Full legal backing.",
+        "step3": "3. They Receive",
+        "step3Body": "In a matter of hours, we disburse COP to Bancolombia/Nequi/Daviplata or USDT (TRC20/ERC20) to your wallet.",
+        "cta": "→ See full process"
+    },
+    "Archetypes": {
+        "title": "Who FBS is For",
+        "t1_title": "International Freelancer",
+        "t1_head": "Collect your wires without losing 6% in bank fees.",
+        "t1_body": "You work for clients in the US, Canada, or Europe, and every wire you receive passes through 2 or 3 banks that take a cut. With FBS, that money travels directly to you: in USDT to your wallet or in COP to your Bancolombia account, no intermediaries, in hours.",
+        "t1_cta": "Quote my next wire →",
+        "t2_title": "Student / Family",
+        "t2_head": "Tuition and living expenses from Europe or the US, without delays.",
+        "t2_body": "Your parents or partner send you money from Spain, Germany, or France. With SEPA Instant or Wire, we receive and convert to pesos so you have the money in your account in Colombia the same day. No Western Union, no lines.",
+        "t2_cta": "Quote family transfer →",
+        "t3_title": "European Migrant",
+        "t3_head": "Send Euros to Colombia. Your family receives them today.",
+        "t3_body": "You live in Europe and want to send money to Colombia regularly. SEPA Instant brings us your euros in seconds. We convert them at the best market rate and deposit them into the account you specify in Colombia.",
+        "t3_cta": "Quote my transfer from Europe →",
+        "t4_title": "SME & Enterprise",
+        "t4_head": "B2B operations up to $50K/month. Full traceability.",
+        "t4_body": "Your company imports, exports, or pays international suppliers. FBS gives you corporate access with a dedicated account, legal mandate backing, reports for each operation, and ample limits. No endless KYC: an assigned broker.",
+        "t4_cta": "Open a corporate account →",
+        "t5_title": "Trader / Arbitrageur",
+        "t5_head": "Liquidity in USDT at market price. Fast.",
+        "t5_body": "You need liquidity in USDT TRC20 or ERC20 to arbitrage between platforms or move capital at speed. FBS gives you preferential volume rates, without exchange delays, with a broker available in real time.",
+        "t5_cta": "Check volume rate →"
+    },
+    "Trust": {
+        "counter": "+1,500 Verified Operations",
+        "b1_title": "AML Checked",
+        "b1_sub": "International anti-money laundering standards",
+        "b2_title": "KYC Verified",
+        "b2_sub": "Identity verified in every operation",
+        "b3_title": "Safe Transfers",
+        "b3_sub": "Legal backing and E2E encryption",
+        "b4_title": "Legal Compliance",
+        "b4_sub": "Regulatory compliance in Colombia and USA",
+        "footerNote": "Institutional market data: Dasbanq & NexxdiPay"
+    },
+    "Faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "How long do operations take?",
+        "a1": "Typically between 15 and 45 minutes once the receipt of your funds is confirmed in our US or European accounts. USDT deliveries are almost immediate. If to Bancolombia or Nequi accounts, maximum 2 business hours.",
+        "q2": "Are there hidden fees?",
+        "a2": "No. The spread is already included in the exchange rate given to you by the broker on WhatsApp. The rate you see in the calculator is very close to the real one. The agreed amount is exactly the amount you receive.",
+        "q3": "Do I have to open an account or create a login?",
+        "a3": "No. We operate a 'concierge' model. You only need to write us on WhatsApp. We perform KYC validations via chat the first time (ID document) and then you transact freely with your assigned broker.",
+        "q4": "What are the minimum and maximum amounts?",
+        "a4": "The minimum amount per operation is $500 USD/EUR. The standard daily maximum amount is $50,000 USD. However, for B2B corporate accounts we can handle larger volumes upon prior request and strict legal mandate."
+    },
+    "FinalCta": {
+        "title": "Ready for your first operation?",
+        "subtitle": "Stop losing money on traditional bank fees. Talk to a human broker right now.",
+        "button": "Quote Now via WhatsApp →",
+        "note": "Response time: < 5 minutes."
+    }
+}

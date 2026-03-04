@@ -1,0 +1,97 @@
+{
+    "Hero": {
+        "eyebrow": "Tasas en vivo · Operando ahora mismo",
+        "headline": "Tu dinero no debería pedir permiso para cruzar fronteras.",
+        "subline": "Nosotros lo movemos.",
+        "body": "Convierte USD o EUR a Pesos Colombianos o USDT en horas. Sin bancos intermediarios. Sin Western Union. Solo WhatsApp.",
+        "cta": "Iniciar Transferencia en WhatsApp"
+    },
+    "Navbar": {
+        "inicio": "Inicio",
+        "servicios": "Servicios",
+        "comoFunciona": "Cómo Funciona",
+        "arquetipos": "Para Ti",
+        "confianza": "Confianza",
+        "faq": "FAQ",
+        "cotizar": "Cotizar Ahora"
+    },
+    "Footer": {
+        "tagline": "Tu dinero, sin fronteras.",
+        "description": "Broker premium de cambio de divisas operando vía WhatsApp. Rapidez, seguridad y respaldo legal.",
+        "amlDisclaimer": "⚖️ FBS opera como facilitador de servicios de corretaje. Todas las transacciones cumplen normativas AML y KYC vigentes.",
+        "rights": "© 2026 Full Broker Services. Todos los derechos reservados."
+    },
+    "Stats": {
+        "vol": "+$50M USD",
+        "volLabel": "Transaccionados",
+        "ops": "+12,000",
+        "opsLabel": "Operaciones Exitosas",
+        "time": "15 min",
+        "timeLabel": "Tiempo Promedio",
+        "support": "24/7",
+        "supportLabel": "Soporte Premium"
+    },
+    "HowItWorks": {
+        "title": "Tu Dinero, Sin Fronteras — en 3 Pasos",
+        "subtitle": "Simplificamos las finanzas internacionales con un proceso transparente y exclusivo.",
+        "step1": "1. Cotizas",
+        "step1Body": "Inicia un chat en WhatsApp. Cuéntanos cuánto quieres mover y a qué moneda. Te damos la tasa preferencial al instante.",
+        "step2": "2. Transfieres",
+        "step2Body": "Realiza el Wire o SEPA a nuestras cuentas corporativas verificadas en EE.UU. o Europa. Respaldo legal total.",
+        "step3": "3. Reciben",
+        "step3Body": "En cuestión de horas, dispersamos COP a Bancolombia/Nequi/Daviplata o USDT (TRC20/ERC20) a su wallet.",
+        "cta": "→ Ver proceso completo"
+    },
+    "Archetypes": {
+        "title": "Para Quién es FBS",
+        "t1_title": "Freelancer Internacional",
+        "t1_head": "Cobra tus wires sin perder el 6% en comisiones bancarias.",
+        "t1_body": "Trabajas para clientes en EE.UU., Canadá o Europa y cada wire que recibes pasa por 2 o 3 bancos que se quedan con una parte. Con FBS, ese dinero viaja directo a ti: en USDT a tu wallet o en COP a tu cuenta Bancolombia, sin intermediarios, en horas.",
+        "t1_cta": "Quiero cotizar mi próximo wire →",
+        "t2_title": "El Estudiante / Familia",
+        "t2_head": "Matrícula y manutención desde Europa o EE.UU., sin retrasos.",
+        "t2_body": "Tus padres o pareja te envían dinero desde España, Alemania o Francia. Con SEPA Instant o Wire, nosotros recibimos y convertimos a pesos para que tengas el dinero en tu cuenta en Colombia el mismo día. Sin Western Union, sin filas.",
+        "t2_cta": "Cotizar envío familiar →",
+        "t3_title": "Migrante Europeo",
+        "t3_head": "Manda Euros a Colombia. Tu familia los recibe hoy.",
+        "t3_body": "Vives en Europa y quieres enviar dinero a Colombia de forma regular. SEPA Instant nos trae tus euros en segundos. Nosotros los convertimos a la mejor tasa de mercado y los depositamos en la cuenta que indiques en Colombia.",
+        "t3_cta": "Cotizar mi envío desde Europa →",
+        "t4_title": "PyME & Empresa",
+        "t4_head": "Operaciones B2B hasta $50K/mes. Trazabilidad total.",
+        "t4_body": "Tu empresa importa, exporta o paga proveedores internacionales. FBS te da un acceso corporativo con cuenta dedicada, respaldo de mandato legal, reportes de cada operación y límites amplios. Nada de KYC interminables: un bróker asignado.",
+        "t4_cta": "Abrir cuenta corporativa →",
+        "t5_title": "Trader / Arbitrador",
+        "t5_head": "Liquidez en USDT al precio de mercado. Rápido.",
+        "t5_body": "Necesitas liquidez en USDT TRC20 o ERC20 para arbitrar entre plataformas o mover capital a velocidad. FBS te da tasas preferenciales por volumen, sin los delays de los exchanges, con bróker disponible en tiempo real.",
+        "t5_cta": "Consultar tasa por volumen →"
+    },
+    "Trust": {
+        "counter": "+1,500 Operaciones Verificadas",
+        "b1_title": "AML Checked",
+        "b1_sub": "Estándares internacionales anti lavado",
+        "b2_title": "KYC Verified",
+        "b2_sub": "Identidad verificada en cada operación",
+        "b3_title": "Transferencias Seguras",
+        "b3_sub": "Respaldo legal y cifrado E2E",
+        "b4_title": "Legal Compliance",
+        "b4_sub": "Cumplimiento normativo Colombia y USA",
+        "footerNote": "Datos de mercado institucionales: Dasbanq & NexxdiPay"
+    },
+    "Faq": {
+        "title": "Preguntas Frecuentes",
+        "q1": "¿Cuánto tardan las operaciones?",
+        "a1": "Típicamente entre 15 y 45 minutos una vez confirmado el recibo de tus fondos en nuestras cuentas de USA o Europa. Las entregas en USDT son casi inmediatas. Si es a cuentas Bancolombia o Nequi, máximo 2 horas hábiles.",
+        "q2": "¿Tienen comisiones ocultas?",
+        "a2": "No. El spread (spread bancario) ya está incluido en la tasa de cambio que te da el bróker en WhatsApp. La tasa que ves en el cotizador es muy cercana a la real. El monto acordado es exactamente el monto que recibes.",
+        "q3": "¿Tengo que abrir una cuenta o crear un login?",
+        "a3": "No. Operamos un modelo 'concierge'. Solo necesitas escribirnos a WhatsApp. Realizamos validaciones KYC por chat la primera vez (documento de identidad) y luego transaccionas libremente con tu bróker asignado.",
+        "q4": "¿Cuáles son los montos mínimos y máximos?",
+        "a4": "El monto mínimo por operación es de $500 USD/EUR. El monto máximo diario estándar es de $50,000 USD. Sin embargo, para cuentas corporativas B2B podemos manejar volúmenes mayores bajo solicitud previa y mandato legal extricto."
+    },
+    "FinalCta": {
+        "title": "¿Listo para tu primera operación?",
+        "subtitle": "No pierdas más dinero en comisiones bancarias tradicionales. Habla con un bróker humano ahora mismo.",
+        "button": "Cotizar Ahora por WhatsApp →",
+        "note": "Tiempo de respuesta: < 5 minutos."
+    }
+}

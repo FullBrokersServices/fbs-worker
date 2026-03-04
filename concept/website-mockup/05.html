@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Full Broker Services - Trust &amp; Proof</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#f2d00d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#000000",
+                        "card-dark": "#111111",
+                        "accent-platinum": "#E5E4E2",
+                        "accent-gold": "#C5B358",
+                    },
+                    fontFamily: {
+                        display: ["Manrope", "sans-serif"],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(17, 17, 17, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .gold-glow {
+            text-shadow: 0 0 20px rgba(242, 208, 13, 0.2);
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display antialiased overflow-x-hidden">
+    <div class="min-h-screen flex flex-col relative">
+        <!-- Navbar -->
+        <header class="sticky top-0 z-50 glass-card border-b border-[#333]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center gap-3">
+                        <div class="size-8 text-primary flex items-center justify-center rounded-lg bg-primary/10">
+                            <span class="material-symbols-outlined text-2xl">diamond</span>
+                        </div>
+                        <h2 class="text-white text-lg font-bold tracking-tight">FBS <span
+                                class="text-primary font-normal">Trust</span></h2>
+                    </div>
+                    <nav class="hidden md:flex space-x-8">
+                        <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium"
+                            href="#">Home</a>
+                        <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium"
+                            href="#">Services</a>
+                        <a class="text-primary text-sm font-medium" href="#">Trust</a>
+                        <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium"
+                            href="#">Contact</a>
+                    </nav>
+                    <div>
+                        <button
+                            class="bg-primary hover:bg-yellow-400 text-black px-5 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(242,208,13,0.3)]">
+                            Sign In
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content -->
+        <main class="flex-grow flex flex-col items-center justify-start pt-12 pb-20 px-4 sm:px-6 relative">
+            <!-- Abstract Background Elements -->
+            <div class="absolute top-20 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-20 right-1/4 w-64 h-64 bg-accent-platinum/5 rounded-full blur-[80px] pointer-events-none">
+            </div>
+            <div class="max-w-5xl w-full z-10 flex flex-col gap-16">
+                <!-- 1. Dynamic Counter -->
+                <section class="text-center space-y-4 animate-fade-in-up">
+                    <div
+                        class="inline-flex items-center justify-center p-3 rounded-full bg-[#1A1A1A] border border-[#333] mb-4">
+                        <span class="material-symbols-outlined text-primary text-sm mr-2">verified</span>
+                        <span class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Verified
+                            Performance</span>
+                    </div>
+                    <h1
+                        class="text-6xl md:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-primary to-yellow-600 gold-glow tracking-tighter">
+                        +1,500
+                    </h1>
+                    <p class="text-xl md:text-2xl text-accent-platinum font-light tracking-wide">
+                        Operaciones Completadas
+                    </p>
+                    <div
+                        class="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-6 opacity-50">
+                    </div>
+                </section>
+                <!-- 2. Trust Badges (Grid Layout) -->
+                <section class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                    <!-- Badge 1 -->
+                    <div
+                        class="glass-card p-6 rounded-2xl flex flex-col items-center text-center gap-3 hover:bg-white/5 transition-all group border-t-2 border-t-transparent hover:border-t-primary">
+                        <div
+                            class="p-3 bg-gradient-to-br from-gray-800 to-black rounded-xl shadow-lg border border-gray-700 group-hover:border-primary/50 transition-colors">
+                            <span
+                                class="material-symbols-outlined text-3xl text-primary group-hover:scale-110 transition-transform">shield_person</span>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg">AML Checked</h3>
+                            <p class="text-slate-400 text-sm mt-1">Global Standard Security</p>
+                        </div>
+                    </div>
+                    <!-- Badge 2 -->
+                    <div
+                        class="glass-card p-6 rounded-2xl flex flex-col items-center text-center gap-3 hover:bg-white/5 transition-all group border-t-2 border-t-transparent hover:border-t-primary">
+                        <div
+                            class="p-3 bg-gradient-to-br from-gray-800 to-black rounded-xl shadow-lg border border-gray-700 group-hover:border-primary/50 transition-colors">
+                            <span
+                                class="material-symbols-outlined text-3xl text-primary group-hover:scale-110 transition-transform">verified_user</span>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg">KYC Verified</h3>
+                            <p class="text-slate-400 text-sm mt-1">Identity Confirmed</p>
+                        </div>
+                    </div>
+                    <!-- Badge 3 -->
+                    <div
+                        class="glass-card p-6 rounded-2xl flex flex-col items-center text-center gap-3 hover:bg-white/5 transition-all group border-t-2 border-t-transparent hover:border-t-primary">
+                        <div
+                            class="p-3 bg-gradient-to-br from-gray-800 to-black rounded-xl shadow-lg border border-gray-700 group-hover:border-primary/50 transition-colors">
+                            <span
+                                class="material-symbols-outlined text-3xl text-primary group-hover:scale-110 transition-transform">lock_clock</span>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Safe Transfers</h3>
+                            <p class="text-slate-400 text-sm mt-1">End-to-End Encrypted</p>
+                        </div>
+                    </div>
+                    <!-- Badge 4 -->
+                    <div
+                        class="glass-card p-6 rounded-2xl flex flex-col items-center text-center gap-3 hover:bg-white/5 transition-all group border-t-2 border-t-transparent hover:border-t-primary">
+                        <div
+                            class="p-3 bg-gradient-to-br from-gray-800 to-black rounded-xl shadow-lg border border-gray-700 group-hover:border-primary/50 transition-colors">
+                            <span
+                                class="material-symbols-outlined text-3xl text-primary group-hover:scale-110 transition-transform">gavel</span>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Legal Compliance</h3>
+                            <p class="text-slate-400 text-sm mt-1">Fully Regulated</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- 3. Archetype Testimonials -->
+                <section class="space-y-6">
+                    <div class="flex items-center justify-between px-2">
+                        <h2 class="text-2xl font-bold text-white">Client Experiences</h2>
+                        <div class="flex gap-2">
+                            <button
+                                class="size-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-white/10 text-white">
+                                <span class="material-symbols-outlined">arrow_back</span>
+                            </button>
+                            <button
+                                class="size-10 rounded-full bg-primary text-black flex items-center justify-center hover:bg-yellow-400">
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex overflow-x-auto gap-6 pb-8 hide-scrollbar snap-x snap-mandatory">
+                        <!-- Testimonial 1 -->
+                        <div
+                            class="min-w-[320px] md:min-w-[380px] snap-center glass-card p-6 rounded-2xl border-l-4 border-l-primary flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-start justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="size-12 rounded-full bg-slate-800 overflow-hidden border border-gray-600"
+                                            data-alt="Portrait of a young freelancer">
+                                            <img alt="Freelancer user portrait" class="w-full h-full object-cover"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHstxDoTujZ7K8MVHAxfjECspkoeIs3pJhV5MEUnExtPpq3gDHgTvfTYqrTLaeFzzD3H_ETuMq3X7k8mdjdvPfJd2uoy4xuUqv5p2pEas2gkQTd1NFVS02Rgv-8tCh1s2rtyVFgd3dwsT_GET-u0tRMA6yWSy-9qFAetU3gKAv3ej68lJanklLIXDP_VRJM1HcLNB3NP-LttKJfec_hBJftPAA8lRBxHJ41jwbnoc1s1tdnsub7SgDGwVvv74opQsO36dg31gAL8o" />
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white font-bold">Freelancer</h4>
+                                            <p class="text-primary text-xs font-medium uppercase tracking-wider">Tech
+                                                Professional</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-slate-500">Today</span>
+                                </div>
+                                <div class="flex gap-1 mb-4">
+                                    <span class="material-symbols-outlined text-primary text-lg fill-1">star</span>
+                                    <span class="material-symbols-outlined text-primary text-lg fill-1">star</span>
+                                    <span class="material-symbols-outlined text-primary text-lg fill-1">star</span>
+                                    <span class="material-symbols-outlined text-primary text-lg fill-1">star</span>
+                                    <span class="material-symbols-outlined text-primary text-lg fill-1">star</span>
+                                </div>
+                                <p class="text-slate-200 text-lg leading-relaxed">
+                                    "Recibo mis pagos de EE.UU. en USDT sin complicaciones. La rapidez es
+                                    impresionante."
+                                </p>
+                            </div>
+                            <div
+                                class="mt-6 pt-4 border-t border-white/10 flex justify-between items-center text-sm text-slate-400">
+                                <span>Verified Transaction</span>
+                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div
+                            class="min-w-[320px] md:min-w-[380px] snap-center glass-card p-6 rounded-2xl border-l-4 border-l-accent-platinum flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-start justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="size-12 rounded-full bg-slate-800 overflow-hidden border border-gray-600"
+                                            data-alt="Portrait of a student smiling">
+                                            <img alt="Student user portrait" class="w-full h-full object-cover"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWL0ZS26tqoR9IdGKvcJhHu5iawPvkTGBN-y9jaVSSs4IEXysCY9IIW21-gu0eXRNjxvHp70YGaNELvvBx4j57HNdXx7EnLQYX6Kf5N742Nw01MupeXxOFQfyuTPvPyDL5oSblmerQ1T0gJXL8mU8Z56bCiQ2jZ_OJHZWktShsM7uME5k2andLAO2BjL5Nw4DB6M9vZcotEq2ZwynmHHWwnii-r0z_IslmvxVeDNUeAN_8ibpvp4je4wdBxmTf8Df5PDgkX0OLfrg" />
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white font-bold">Student/Family</h4>
+                                            <p
+                                                class="text-accent-platinum text-xs font-medium uppercase tracking-wider">
+                                                Remittances</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-slate-500">Yesterday</span>
+                                </div>
+                                <div class="flex gap-1 mb-4">
+                                    <span class="material-symbols-outlined text-primary text-lg fill-1">star</span>
+                                    <span class="material-symbols-outlined text-primary text-lg fill-1">star</span>
+                                    <span class="material-symbols-outlined text-primary text-lg fill-1">star</span>
+                                    <span class="material-symbols-outlined text-primary text-lg fill-1">star</span>
+                                    <span class="material-symbols-outlined text-primary text-lg fill-1">star_half</span>
+                                </div>
+                                <p class="text-slate-200 text-lg leading-relaxed">
+                                    "Enviar euros a mi familia en Colombia nunca fue tan rápido. Excelente servicio."
+                                </p>
+                            </div>
+                            <div
+                                class="mt-6 pt-4 border-t border-white/10 flex justify-between items-center text-sm text-slate-400">
+                                <span>Verified Transaction</span>
+                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                            </div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div
+                            class="min-w-[320px] md:min-w-[380px] snap-center glass-card p-6 rounded-2xl border-l-4 border-l-primary flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-start justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="size-12 rounded-full bg-slate-800 overflow-hidden border border-gray-600"
+                                            data-alt="Portrait of a business professional">
+                                            <img alt="SME owner portrait" class="w-full h-full object-cover"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPivs3PcncrSNQ-CXQItUTqNpJnS4aSdNtlcANvpGmpSpREycNUuuMGqfi_W4ul61_GFIxXJUajup9ACEj9MTGRka8C785owY-L0uDbr5XPsJ_n08G-zSsFhPDCU2ayQrwHUEhtyfEZN6I_T3uCt_tjrj1CzN2Qb70r7SAijxwp8r7jGNPUgBHUaRvFvLAj2ve3RlNdNKXFF_gH37Zv_rnD3wGO1QXGCM-DHd6Ngbsijpqc5V46SN-iRxW7hstI1XqapGZrRQnSM8" />
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white font-bold">SME Business</h4>
+                                            <p class="text-primary text-xs font-medium uppercase tracking-wider">
+                                                Corporate</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-slate-500">2 days ago</span>
+                                </div>
+                                <div class="flex gap-1 mb-4">
+                                    <span class="material-symbols-outlined text-primary text-lg fill-1">star</span>
+                                    <span class="material-symbols-outlined text-primary text-lg fill-1">star</span>
+                                    <span class="material-symbols-outlined text-primary text-lg fill-1">star</span>
+                                    <span class="material-symbols-outlined text-primary text-lg fill-1">star</span>
+                                    <span class="material-symbols-outlined text-primary text-lg fill-1">star</span>
+                                </div>
+                                <p class="text-slate-200 text-lg leading-relaxed">
+                                    "Límites amplios y total transparencia en cada operación. Ideal para mi empresa."
+                                </p>
+                            </div>
+                            <div
+                                class="mt-6 pt-4 border-t border-white/10 flex justify-between items-center text-sm text-slate-400">
+                                <span>Verified Transaction</span>
+                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Footer Note -->
+                <div class="text-center pb-8 border-t border-[#222] pt-8">
+                    <p class="text-slate-500 text-sm flex items-center justify-center gap-2 mb-2">
+                        <span class="material-symbols-outlined text-base">verified</span>
+                        Verified by Binance &amp; Official TRM
+                    </p>
+                    <p class="text-slate-600 text-xs max-w-lg mx-auto">
+                        Full Broker Services complies with all international anti-money laundering regulations.
+                        Trading involves risk.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

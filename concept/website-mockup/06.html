@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FBS - Preguntas Frecuentes</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#c59334",
+                        "primary-dark": "#b0822e",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#000000", /* Changed to Absolute Black as requested */
+                        "surface-dark": "#0a0a0a",
+                        "border-subtle": "rgba(255,255,255,0.1)",
+                    },
+                    fontFamily: {
+                        display: ["Manrope", "sans-serif"],
+                        body: ["Manrope", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Smooth rotation for the icon */
+        details summary .icon-wrapper {
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary .icon-wrapper {
+            transform: rotate(45deg);
+        }
+
+        /* Fade in animation for content */
+        details[open] .content-wrapper {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+            <!-- Logo Area -->
+            <div class="flex items-center gap-3">
+                <div class="flex h-8 w-8 items-center justify-center rounded bg-primary/20 text-primary">
+                    <span class="material-symbols-outlined text-2xl">currency_exchange</span>
+                </div>
+                <h2 class="text-xl font-bold tracking-tight text-white">FBS</h2>
+            </div>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex flex-1 justify-end items-center gap-8">
+                <div class="flex items-center gap-8">
+                    <a class="text-sm font-medium text-gray-300 transition-colors hover:text-primary"
+                        href="#">Inicio</a>
+                    <a class="text-sm font-medium text-gray-300 transition-colors hover:text-primary"
+                        href="#">Servicios</a>
+                    <a class="text-sm font-medium text-gray-300 transition-colors hover:text-primary" href="#">Tasas</a>
+                    <a class="text-sm font-medium text-gray-300 transition-colors hover:text-primary"
+                        href="#">Contacto</a>
+                </div>
+                <button
+                    class="flex h-10 items-center justify-center rounded-lg bg-primary px-6 text-sm font-bold text-black transition-transform hover:scale-105 hover:bg-primary-dark">
+                    <span>Ingresar</span>
+                </button>
+            </nav>
+            <!-- Mobile Menu Icon -->
+            <div class="md:hidden text-white cursor-pointer">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <div class="mx-auto flex w-full max-w-7xl flex-col px-6 lg:px-10">
+            <!-- Hero / Title Section -->
+            <div class="py-16 text-center lg:py-24">
+                <h1 class="text-4xl font-extrabold tracking-tight text-primary md:text-5xl lg:text-6xl mb-6">
+                    Preguntas Frecuentes
+                </h1>
+                <p class="mx-auto max-w-2xl text-lg text-gray-400">
+                    Resolvemos tus dudas sobre nuestros servicios de conversión de divisas de manera clara y
+                    transparente.
+                </p>
+            </div>
+            <!-- FAQ Accordion Section -->
+            <div class="mx-auto flex w-full max-w-3xl flex-col gap-4 pb-20">
+                <!-- FAQ Item 1 -->
+                <details
+                    class="group overflow-hidden rounded-xl border border-white/5 bg-surface-dark transition-all duration-300 hover:border-primary/30">
+                    <summary class="flex cursor-pointer items-center justify-between p-6 md:p-8">
+                        <h3 class="text-lg font-medium text-white md:text-xl">
+                            ¿Cuánto demoran en enviar los USDT?
+                        </h3>
+                        <div
+                            class="icon-wrapper flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                            <span class="material-symbols-outlined">add</span>
+                        </div>
+                    </summary>
+                    <div class="content-wrapper px-6 pb-6 md:px-8 md:pb-8">
+                        <p class="text-base leading-relaxed text-gray-300">
+                            Procesamiento rápido en el mismo día. Nos esforzamos por la eficiencia en cada transacción
+                            para asegurar que dispongas de tus fondos lo antes posible.
+                        </p>
+                    </div>
+                </details>
+                <!-- FAQ Item 2 -->
+                <details
+                    class="group overflow-hidden rounded-xl border border-white/5 bg-surface-dark transition-all duration-300 hover:border-primary/30">
+                    <summary class="flex cursor-pointer items-center justify-between p-6 md:p-8">
+                        <h3 class="text-lg font-medium text-white md:text-xl">
+                            ¿Están ocultas las comisiones?
+                        </h3>
+                        <div
+                            class="icon-wrapper flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                            <span class="material-symbols-outlined">add</span>
+                        </div>
+                    </summary>
+                    <div class="content-wrapper px-6 pb-6 md:px-8 md:pb-8">
+                        <p class="text-base leading-relaxed text-gray-300">
+                            No, operamos con total transparencia. Nuestras tasas son claras desde el inicio y no existen
+                            comisiones ocultas ni cargos sorpresa al finalizar la operación.
+                        </p>
+                    </div>
+                </details>
+                <!-- FAQ Item 3 -->
+                <details
+                    class="group overflow-hidden rounded-xl border border-white/5 bg-surface-dark transition-all duration-300 hover:border-primary/30">
+                    <summary class="flex cursor-pointer items-center justify-between p-6 md:p-8">
+                        <h3 class="text-lg font-medium text-white md:text-xl">
+                            ¿Necesito abrir una cuenta en su plataforma?
+                        </h3>
+                        <div
+                            class="icon-wrapper flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                            <span class="material-symbols-outlined">add</span>
+                        </div>
+                    </summary>
+                    <div class="content-wrapper px-6 pb-6 md:px-8 md:pb-8">
+                        <p class="text-base leading-relaxed text-gray-300">
+                            No es necesario. Gestionamos todo el proceso de manera personalizada y segura directamente a
+                            través de WhatsApp, simplificando tu experiencia.
+                        </p>
+                    </div>
+                </details>
+                <!-- FAQ Item 4 (Bonus for realism) -->
+                <details
+                    class="group overflow-hidden rounded-xl border border-white/5 bg-surface-dark transition-all duration-300 hover:border-primary/30">
+                    <summary class="flex cursor-pointer items-center justify-between p-6 md:p-8">
+                        <h3 class="text-lg font-medium text-white md:text-xl">
+                            ¿Qué divisas manejan actualmente?
+                        </h3>
+                        <div
+                            class="icon-wrapper flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                            <span class="material-symbols-outlined">add</span>
+                        </div>
+                    </summary>
+                    <div class="content-wrapper px-6 pb-6 md:px-8 md:pb-8">
+                        <p class="text-base leading-relaxed text-gray-300">
+                            Nos especializamos en el intercambio de USD, EUR, COP y USDT, ofreciendo las tasas más
+                            competitivas del mercado financiero actual.
+                        </p>
+                    </div>
+                </details>
+            </div>
+            <!-- CTA Section -->
+            <div class="@container mb-24">
+                <div
+                    class="relative overflow-hidden rounded-2xl bg-surface-dark border border-white/5 px-6 py-16 text-center md:px-12 lg:py-20">
+                    <!-- Decorative Gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none">
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center gap-6">
+                        <h2 class="max-w-2xl text-3xl font-bold tracking-tight text-white md:text-4xl">
+                            ¿Tienes más dudas?
+                        </h2>
+                        <p class="max-w-xl text-lg text-gray-400">
+                            Nuestro equipo de soporte especializado está listo para ayudarte personalmente con cualquier
+                            consulta adicional.
+                        </p>
+                        <div class="mt-4 flex w-full justify-center">
+                            <button
+                                class="group flex min-w-[200px] items-center justify-center gap-3 rounded-lg bg-primary px-8 py-4 text-base font-bold text-black transition-all hover:bg-white hover:shadow-[0_0_20px_rgba(197,147,52,0.3)]">
+                                <span class="material-symbols-outlined text-xl">chat</span>
+                                <span>Escríbenos por WhatsApp</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-black py-12">
+        <div class="mx-auto flex max-w-7xl flex-col gap-8 px-6 lg:px-10">
+            <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+                <div class="flex items-center gap-2">
+                    <div class="flex h-6 w-6 items-center justify-center rounded bg-primary/20 text-primary">
+                        <span class="material-symbols-outlined text-sm">currency_exchange</span>
+                    </div>
+                    <span class="text-lg font-bold text-white">Full Broker Services</span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <a class="text-sm text-gray-400 transition-colors hover:text-primary" href="#">Términos y
+                        Condiciones</a>
+                    <a class="text-sm text-gray-400 transition-colors hover:text-primary" href="#">Política de
+                        Privacidad</a>
+                    <a class="text-sm text-gray-400 transition-colors hover:text-primary" href="#">Soporte</a>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 md:flex-row">
+                <p class="text-center text-sm text-gray-500 md:text-left">
+                    © 2024 Full Broker Services. Todos los derechos reservados.
+                </p>
+                <div class="flex gap-6">
+                    <a class="text-gray-500 transition-colors hover:text-white" href="#">
+                        <span class="material-symbols-outlined">public</span>
+                        <!-- Replaces generic social icon with web icon as placeholder -->
+                    </a>
+                    <a class="text-gray-500 transition-colors hover:text-white" href="#">
+                        <span class="material-symbols-outlined">alternate_email</span>
+                    </a>
+                    <a class="text-gray-500 transition-colors hover:text-white" href="#">
+                        <span class="material-symbols-outlined">rss_feed</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
