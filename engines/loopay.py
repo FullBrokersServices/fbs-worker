@@ -5,7 +5,7 @@ from .base import BaseEngine
 class LoopayXEngine(BaseEngine):
     def __init__(self, user, password, totp_seed):
         super().__init__("LoopayX", user, password, totp_seed)
-        self.login_url = "https://app.loopayx.com/login"
+        self.login_url = "https://app.loopayx.com/auth/client/login"
         self.dashboard_url = "https://app.loopayx.com/dashboard"
 
     def run(self, headful=False):
@@ -13,15 +13,27 @@ class LoopayXEngine(BaseEngine):
         try:
             self.logger.info("Checking session for LoopayX...")
             self.page.goto(self.dashboard_url)
-            self.page.wait_for_load_state("networkidle")
+            self.page.wait_for_timeout(5000) # Wait for initial redirect
             
-            # If redirected to login, perform login
-            if "login" in self.page.url:
-                self.logger.info("Session expired or missing. Logging in to LoopayX...")
+            # If we are not on the dashboard, force login page
+            if "/dashboard" not in self.page.url.lower():
+                self.logger.info(f"Not on dashboard ({self.page.url}). Forcing login page...")
                 self.page.goto(self.login_url)
+                self.page.wait_for_timeout(5000) # Wait for login page to render
                 
-                # Login Flow
-                self.page.fill('input[name="username"], input[type="text"]', self.user)
+                # Try multiple selectors for the username field
+                selectors = ['input[name="username"]', 'input[type="text"]', 'input[name="email"]', 'input[type="email"]']
+                username_field = None
+                for selector in selectors:
+                    username_field = self.page.query_selector(selector)
+                    if username_field:
+                        self.logger.info(f"Found username field with selector: {selector}")
+                        break
+                
+                if username_field:
+                    username_field.fill(self.user)
+                else:
+                    self.logger.warning("Could not find username field automatically. User might need to click/interact.")
                 
                 # Password optional for LoopayX (Passwordless/SMS-only flow)
                 if self.password:
@@ -71,7 +83,10 @@ class LoopayXEngine(BaseEngine):
             self.page.screenshot(path=f"logs/loopay_error_{int(time.time())}.png")
             return None
         finally:
-            self.teardown()
+            if not headful:
+                self.teardown()
+            else:
+                self.logger.info("Browser remains open in headful mode for user interaction.")
 
     def extract_data(self):
         body_text = self.page.inner_text("body")

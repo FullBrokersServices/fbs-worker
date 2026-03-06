@@ -28,6 +28,9 @@ def verify_provider(engine_class, user, pwd, seed=None):
         print(f"\nParsed Data: {data}\n")
     else:
         logger.error(f"FAILED: Could not extract data for {engine_class.__name__}")
+    
+    # Keep open for interaction
+    input("\nPresiona ENTER en esta terminal cuando hayas terminado en el navegador para cerrarlo...")
 
 if __name__ == "__main__":
     print("====================================================")
