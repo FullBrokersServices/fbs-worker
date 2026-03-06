@@ -50,20 +50,27 @@ graph TD
 
 ---
 
-## 🛠️ Instalación y Configuración
+### 1. Entorno de Desarrollo (Windows)
+```powershell
+# Crear entorno (si no existe)
+python -m venv venv
 
-### 1. Entorno de Desarrollo
-```bash
-# Preparar entorno
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+# ACTIVAR ENTORNO
+.\venv\Scripts\activate
 
 # Instalar requisitos
 pip install -r requirements.txt
 
-# Configurar Playwright
+# Configurar motores (Playwright)
 playwright install chromium
 ```
+
+### 2. Inicialización de Sesiones (2FA SMS)
+Para brokers que usan SMS (LoopayX), debes inicializar la sesión manualmente una vez:
+```bash
+python scripts/verify_sessions.py
+```
+> Elige la opción **LoopayX**, logueate en la ventana que aparece y escribe tu código SMS. La sesión quedará guardada en la carpeta `/sessions`.
 
 ### 2. Variables de Entorno (`.env`)
 | Variable | Descripción |
