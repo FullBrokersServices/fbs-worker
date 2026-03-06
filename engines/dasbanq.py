@@ -8,10 +8,8 @@ class DasbanqEngine(BaseEngine):
         self.login_url = "https://dasbanq.com/es/login"
         self.dashboard_url = "https://dasbanq.com/es/dashboard/banking-crypto"
 
-    def run(self):
-        self.setup()
-    def run(self):
-        self.setup()
+    def run(self, headful=False):
+        self.setup(headful=headful)
         try:
             self.logger.info("Checking session for Dasbanq...")
             self.page.goto(self.dashboard_url)

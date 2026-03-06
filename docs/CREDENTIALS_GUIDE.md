@@ -34,25 +34,39 @@ Para que el trabajador genere los códigos automáticamente, necesita la "Semill
 Asegúrate de que tu archivo `worker-python/.env` tenga este formato:
 
 ```bash
-# NexxdiPay
-NEXXDI_USER=tu_email@ejemplo.com
-NEXXDI_PASS=tu_contraseña_segura
+# NexxdiPay y Dasbanq (Google Authenticator)
+# Estos brokers usan TOTP tradicional.
 NEXXDI_TOTP_SEED=TU_SEMILLA_SIN_ESPACIOS
-
-# LoopayX
-LOOPAY_USER=tu_usuario
-LOOPAY_PASS=tu_contraseña_segura
-LOOPAY_TOTP_SEED=TU_SEMILLA_SIN_ESPACIOS
-
-# Dasbanq (Phase 3)
-DASBANQ_USER=tu_usuario
-DASBANQ_PASS=tu_contraseña_segura
 DASBANQ_TOTP_SEED=TU_SEMILLA_SIN_ESPACIOS
+
+# LoopayX (SMS 2FA)
+# LoopayX NO usa semilla TOTP. Usa mensajes de texto.
+# Para este broker, deja la semilla vacía y usa el script de verificación.
+LOOPAY_TOTP_SEED=
 ```
 
 ---
 
-## 4. Dasbanq (Notas Especiales)
+## 4. Manejo de SMS 2FA (LoopayX)
+
+Como LoopayX envía un código por SMS, el trabajador no puede generarlo automáticamente desde una semilla. Para solucionar esto, utilizamos **Persistencia de Sesión**:
+
+1.  **Ejecuta el Verificador**: En tu terminal, ejecuta:
+    ```bash
+    python scripts/verify_sessions.py
+    ```
+2.  **Selecciona LoopayX**: Presiona `1`.
+3.  **Login Manual**: Se abrirá una ventana del navegador (Visible). Ingresa tu usuario y contraseña.
+4.  **Ingresa el SMS**: Cuando LoopayX envíe el SMS a tu teléfono, escríbelo en la ventana del navegador y completa el login.
+5.  **Cierra el Navegador**: Una vez veas el dashboard de LoopayX, el script terminará.
+6.  **Sesión Guardada**: La sesión ahora está guardada localmente en la carpeta `sessions/loopayx/`. 
+
+> [!TIP]
+> El trabajador principal (`harvester.py`) reutilizará esta sesión guardada en sus ciclos automáticos, por lo que **no te pedirá el SMS de nuevo** hasta que la sesión expire (lo cual suele tardar semanas o meses).
+
+---
+
+## 5. Dasbanq (Notas Especiales)
 
 Dasbanq opera en `dasbanq.com`. El proceso para obtener la semilla TOTP es idéntico al de los otros brokers (Ajustes -> Seguridad -> 2FA). 
 

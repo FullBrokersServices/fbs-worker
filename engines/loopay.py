@@ -8,10 +8,8 @@ class LoopayXEngine(BaseEngine):
         self.login_url = "https://app.loopayx.com/login"
         self.dashboard_url = "https://app.loopayx.com/dashboard"
 
-    def run(self):
-        self.setup()
-    def run(self):
-        self.setup()
+    def run(self, headful=False):
+        self.setup(headful=headful)
         try:
             self.logger.info("Checking session for LoopayX...")
             self.page.goto(self.dashboard_url)
@@ -22,20 +20,41 @@ class LoopayXEngine(BaseEngine):
                 self.logger.info("Session expired or missing. Logging in to LoopayX...")
                 self.page.goto(self.login_url)
                 
-                # Login Flow (Guesses based on standard patterns)
+                # Login Flow
                 self.page.fill('input[name="username"], input[type="text"]', self.user)
                 self.page.fill('input[name="password"]', self.password)
                 self.page.click('button[type="submit"]')
                 
-                # Handle TOTP if exists
-                otp_field = self.page.query_selector('input[name="otp"], input[placeholder*="2FA"]')
+                # Handle 2FA (TOTP or SMS)
+                self.page.wait_for_timeout(2000) # Wait for potential redirect/field appearance
+                
+                # Detect OTP field (TOTP or SMS code)
+                otp_field = self.page.query_selector('input[name="otp"], input[placeholder*="2FA"], input[name="code"]')
                 if otp_field:
-                    self.logger.info("Entering TOTP...")
-                    totp_code = self.get_totp()
-                    self.page.fill(otp_field, totp_code)
-                    self.page.click('button[type="submit"]')
+                    if self.totp_seed:
+                        self.logger.info("Entering TOTP from seed...")
+                        totp_code = self.get_totp()
+                        otp_field.fill(totp_code)
+                    else:
+                        self.logger.warning("SMS 2FA detected (no TOTP seed provided).")
+                        if headful:
+                            self.logger.info("Awaiting manual code entry in headful mode...")
+                            # In headful mode, the user can type it directly or we can wait
+                        else:
+                            self.logger.error("SMS 2FA required but running in headless mode. Please run scripts/verify_sessions.py")
+                            return None
+
+                    # Click submit if 2FA was handled
+                    submit_button = self.page.query_selector('button[type="submit"]')
+                    if submit_button:
+                        submit_button.click()
 
                 self.page.wait_for_load_state("networkidle")
+                
+                if "login" in self.page.url:
+                    self.logger.error("Login failed (still on login page).")
+                    return None
+                    
                 self.logger.info("Login successful.")
             else:
                 self.logger.info("Reusing existing session for LoopayX.")

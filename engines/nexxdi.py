@@ -10,10 +10,8 @@ class NexxdiPayEngine(BaseEngine):
         self.last_rate = None
         self.stale_count = 0
 
-    def run(self):
-        self.setup()
-    def run(self):
-        self.setup()
+    def run(self, headful=False):
+        self.setup(headful=headful)
         try:
             self.logger.info("Checking session for NexxdiPay...")
             self.page.goto(self.rates_url)
