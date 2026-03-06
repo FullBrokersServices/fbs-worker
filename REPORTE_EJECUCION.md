@@ -8,7 +8,7 @@ Este reporte detalla los pasos exactos para poner en marcha el trabajador de Pyt
 Asegúrate de que tu archivo `.env` en la raíz del proyecto tenga las credenciales correctas.
 
 1.  **Nexxdi/Dasbanq**: Ingresa Usuario, Contraseña y la Semilla TOTP (Secret Key).
-2.  **LoopayX**: Ingresa Usuario y Contraseña. **Deja el campo `LOOPAY_TOTP_SEED` vacío**, ya que usaremos el método de SMS.
+2.  **LoopayX**: Ingresa tu Usuario. **Deja la Contraseña (`LOOPAY_PASS`) y la Semilla (`LOOPAY_TOTP_SEED`) vacías**, ya que usaremos el método de SMS únicamente.
 
 ---
 

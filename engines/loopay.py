@@ -22,7 +22,11 @@ class LoopayXEngine(BaseEngine):
                 
                 # Login Flow
                 self.page.fill('input[name="username"], input[type="text"]', self.user)
-                self.page.fill('input[name="password"]', self.password)
+                
+                # Password optional for LoopayX (Passwordless/SMS-only flow)
+                if self.password:
+                    self.page.fill('input[name="password"]', self.password)
+                
                 self.page.click('button[type="submit"]')
                 
                 # Handle 2FA (TOTP or SMS)
