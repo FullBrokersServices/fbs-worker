@@ -151,3 +151,8 @@ cython_debug/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Project Specific
+sessions/
+logs/
+*.png

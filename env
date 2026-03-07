@@ -1,0 +1,21 @@
+# Supabase Credentials
+SUPABASE_URL="https://eohzuleozwvmiupylixf.supabase.co"
+SUPABASE_SERVICE_ROLE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVvaHp1bGVvend2bWl1cHlsaXhmIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MjY3MTA2OSwiZXhwIjoyMDg4MjQ3MDY5fQ.zb_6mHdREJVdcygb4Edcy64TPsck7DlmoShIxIBsrc4"
+DATABASE_URL="postgresql://postgres.eohzuleozwvmiupylixf:Siempre.fullbrokersservices26@aws-1-us-east-1.pooler.supabase.com:5432/postgres"
+
+# Broker Credentials (To be filled by the owner)
+
+# NexxdiPay (Google Authenticator)
+NEXXDI_USER="synerbitsas@gmail.com"
+NEXXDI_PASS="Frank2307@"
+NEXXDI_TOTP_SEED=""
+
+# LoopayX (SMS 2FA - Passwordless)
+LOOPAY_USER="+573115701987"
+LOOPAY_PASS="" # Deja vacío si solo usas SMS
+LOOPAY_TOTP_SEED=""
+
+# Dasbanq (Google Authenticator)
+DASBANQ_USER="synerbitsas@gmail.com"
+DASBANQ_PASS="Frank2307@"
+DASBANQ_TOTP_SEED=""

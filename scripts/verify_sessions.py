@@ -19,18 +19,24 @@ def verify_provider(engine_class, user, pwd, seed=None):
     logger.info(f"--- Verifying Session for {engine_class.__name__} ---")
     engine = engine_class(user, pwd, seed)
     
-    # Run in HEADFUL mode so user can see and interact
-    logger.info("Launching headful browser. Please interact if necessary.")
-    data = engine.run(headful=True)
-    
-    if data:
-        logger.info(f"SUCCESS: Data extracted for {engine_class.__name__}")
-        print(f"\nParsed Data: {data}\n")
-    else:
-        logger.error(f"FAILED: Could not extract data for {engine_class.__name__}")
-    
-    # Keep open for interaction
-    input("\nPresiona ENTER en esta terminal cuando hayas terminado en el navegador para cerrarlo...")
+    try:
+        # Run in HEADFUL mode so user can see and interact
+        logger.info("Launching headful browser. Please interact if necessary.")
+        data = engine.run(headful=True)
+        
+        if data:
+            logger.info(f"SUCCESS: Data extracted for {engine_class.__name__}")
+            print(f"\nParsed Data: {data}\n")
+        else:
+            logger.error(f"FAILED: Could not extract data for {engine_class.__name__}")
+        
+        # Keep open for interaction
+        input("\nPROCESO: Realiza el login en la ventana del navegador.\nCuando hayas terminado y veas el TABLERO (Dashboard), presiona ENTER en esta terminal para GUARDAR la sesión y cerrar...")
+        
+        # Save the current state (cookies, local storage)
+        engine.save_state()
+    finally:
+        engine.teardown()
 
 if __name__ == "__main__":
     print("====================================================")

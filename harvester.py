@@ -80,21 +80,21 @@ def main():
     
     # Initialize Engines
     engines = [
-        NexxdiPayEngine(
-            os.getenv("NEXXDI_USER"), 
-            os.getenv("NEXXDI_PASS"), 
-            os.getenv("NEXXDI_TOTP_SEED")
-        ),
+        # NexxdiPayEngine(
+        #     os.getenv("NEXXDI_USER"), 
+        #     os.getenv("NEXXDI_PASS"), 
+        #     os.getenv("NEXXDI_TOTP_SEED")
+        # ),
         LoopayXEngine(
             os.getenv("LOOPAY_USER"), 
             os.getenv("LOOPAY_PASS"), 
             os.getenv("LOOPAY_TOTP_SEED")
         ),
-        DasbanqEngine(
-            os.getenv("DASBANQ_USER"),
-            os.getenv("DASBANQ_PASS"),
-            os.getenv("DASBANQ_TOTP_SEED")
-        )
+        # DasbanqEngine(
+        #     os.getenv("DASBANQ_USER"),
+        #     os.getenv("DASBANQ_PASS"),
+        #     os.getenv("DASBANQ_TOTP_SEED")
+        # )
     ]
 
     while True:
@@ -104,8 +104,9 @@ def main():
         for engine in engines:
             try:
                 logger.info(f"--- Running {engine.provider_name} Cycle ---")
-                data = engine.run() # Engines handle their own internal timeouts/errors
-                sync_to_supabase(data, engine.provider_name)
+                data = engine.run(headful=True) # Definitive headful verification
+                if data:
+                    sync_to_supabase(data, engine.provider_name)
             except Exception as e:
                 logger.critical(f"Unexpected error in harvester loop for {engine.provider_name}: {e}")
             
